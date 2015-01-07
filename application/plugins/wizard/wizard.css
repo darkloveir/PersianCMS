@@ -1,0 +1,314 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ *
+ * MoonCake v1.3.1 - Wizard Stylesheet
+ *
+ * This file is part of MoonCake, an Admin template build for sale at ThemeForest.
+ * For questions, suggestions or support request, please mail me at maimairel@yahoo.com
+ *
+ * Development Started:
+ * July 28, 2012
+ * Last Update:
+ * December 07, 2012
+ *
+ */
+
+/* Wizard Navigation
+================================================== */
+
+.wizard-nav ul
+{
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.wizard-nav
+{
+    background: #154363;
+	background-image: -ms-linear-gradient(top, #154363, #093757);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#154363), to(#093757));
+    background-image: -webkit-linear-gradient(top, #154363, #093757);
+    background-image: -o-linear-gradient(top, #154363, #093757);
+    background-image: -moz-linear-gradient(top, #154363, #093757);
+    background-image: linear-gradient(top, #154363, #093757);
+    position: relative;
+    border-bottom: 1px solid rgba(1,94,154,0.16);
+    margin-bottom: -1px;
+}
+
+.wizard-nav
+{
+    *zoom: 1;
+}
+
+.wizard-nav:before,
+.wizard-nav:after
+{
+    display: table;
+    content: "";
+}
+
+.wizard-nav:after
+{
+    clear: both;
+}
+
+.wizard-nav ul li
+{
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0 25px;
+    cursor: pointer;
+    margin-right: -25px;
+    background: url(wizard-nav.png) no-repeat right -50px;
+    display: block;
+    max-height: 50px;
+    overflow: hidden;
+}
+
+.wizard-nav ul li.disabled a, 
+.wizard-nav ul li.disabled span
+{
+    color: #04C3F8;
+}
+
+.wizard-nav ul li.disabled, 
+.wizard-nav ul li.disabled:hover
+{
+    background-position: right bottom;
+    cursor: default;
+}
+
+.wizard-nav ul li [class*="icon-"], 
+.wizard-nav ul li [class*="icol-"]
+{
+    font-size: 18px;
+    margin-left: 4px;
+}
+
+.wizard-nav ul li:first-child
+{
+    background-position: -25px -50px;
+    padding-right: 12px;
+}
+
+.wizard-nav ul li:last-child
+{
+    padding-left: 12px;
+
+}
+
+.wizard-nav ul li:first-child.current, 
+.wizard-nav ul li:first-child:hover.current
+{
+    background-position: -25px top;
+}
+
+.wizard-nav ul li:first-child:hover
+{
+    background-position: -25px -100px;
+}
+
+.wizard-nav ul li.current, 
+.wizard-nav ul li.current:hover
+{
+    background-position: right top;
+}
+
+.wizard-nav ul li.current:first-child
+{
+    -webkit-box-shadow: inset 2px 0 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 2px 0 4px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.wizard-nav ul li:hover
+{
+    background-position: right -100px;
+    color: #64D7F4;
+}
+
+.wizard-nav ul li a, 
+.wizard-nav ul li span
+{
+    display: block;
+    line-height: 50px;
+    text-decoration: none;
+    padding: 0 16px;
+    color: #FFFFFF;
+}
+
+.wizard-form .wizard-step {
+	background-color: rgba(0, 0, 0, 0.21);
+	padding: 10px;	
+}
+
+.wizard-form .button-row {
+	background-color: rgba(0, 0, 0, 0.50);
+	padding: 10px;
+}
+
+/* Vertical Wizard
+================================================== */
+
+.wizard-form.wizard-form-vertical
+{
+    margin-right: 180px;
+    border-right: 1px solid #0068A3;
+}
+
+.wizard-nav.wizard-nav-vertical
+{
+    position: absolute;
+    width: 180px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    border-bottom: 0;
+}
+
+.wizard-nav.wizard-nav-vertical ul
+{
+    float: none;
+}
+
+.wizard-nav.wizard-nav-vertical ul li
+{
+    display: block;
+    float: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #007DA3;
+    background-position: -25px -50px;
+}
+
+.wizard-nav.wizard-nav-vertical ul li:hover
+{
+    background-position: -25px -100px;
+}
+
+.wizard-nav.wizard-nav-vertical ul li.current, 
+.wizard-nav.wizard-nav-vertical ul li.current:hover
+{
+    background-position: -25px top;
+}
+
+.wizard-nav.wizard-nav-vertical ul li:last-child
+{
+    border-right: 0;
+}
+
+/* Responsive Wizard
+================================================== */
+	
+.wizard-nav .responsive-prev-btn, 
+.wizard-nav .responsive-next-btn
+{
+    display: none;
+    top: 50%;
+    right: 10px;
+    margin-top: -14px;
+    position: absolute;
+}
+
+.wizard-nav .responsive-next-btn
+{
+    left: 10px;
+    right: auto;
+}
+
+@media (max-width: 767px)
+{
+	
+    .wizard-nav ul
+    {
+        width: 100%;
+    }
+
+    .wizard-nav ul li
+    {
+        display: none;
+    }
+
+    .wizard-nav ul li, 
+    .wizard-nav ul li:last-child, 
+	.wizard-nav ul li span, 
+	.wizard-nav ul li a
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    .wizard-nav ul li.current
+    {
+        display: block !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    .wizard-nav ul li.current, 
+	.wizard-nav ul li.current:hover
+    {
+        background-position: -25px top;
+    }
+
+    .wizard-nav ul li.current
+    {
+        -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1) !important;
+        -moz-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1) !important;
+        box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .wizard-nav ul li:first-child
+    {
+        padding-left: 0;
+    }
+
+    .wizard-nav ul li:last-child
+    {
+        border-right: 0;
+    }
+
+    .wizard-nav .responsive-prev-btn, 
+	.wizard-nav .responsive-next-btn
+    {
+        display: block;
+    }
+
+    .wizard-form.wizard-form-vertical
+    {
+        margin-right: 0;
+        border-right: none;
+    }
+
+    .wizard-nav.wizard-nav-vertical
+    {
+        position: relative;
+        width: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        border-bottom: 1px solid #007DA3;
+        margin: 0 0 -1px 0;
+    }
+
+    .wizard-nav.wizard-nav-vertical ul
+    {
+        float: right;
+    }
+
+    .wizard-nav.wizard-nav-vertical ul li
+    {
+        display: none;
+        float: right;
+        border-bottom: none;
+        background-position: -25px -50px;
+    }
+
+    .wizard-nav.wizard-nav-vertical ul li:hover
+    {
+        background-position: -25px -100px;
+    }
+}

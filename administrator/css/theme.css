@@ -1,0 +1,69 @@
+body, 
+#container
+{
+	background-image:url('../images/core/bg/paper.png');
+}
+
+#sidebar, 
+#sidebar-bg, 
+#header, 
+.panel .panel-header, 
+#login, 
+#login .login-lock, 
+.ui-accordion .ui-accordion-header, 
+.ui-tabs .ui-tabs-nav, 
+.ui-datepicker, 
+.fc-event-skin, 
+.ui-dialog .ui-dialog-titlebar, 
+.jGrowl .jGrowl-notification, .jGrowl .jGrowl-closer, 
+#user-tools .dropdown-menu .dropdown-box, 
+#user-tools .dropdown-menu.open .dropdown-trigger
+{
+	background-color:#35353a;
+}
+
+#header
+{
+	border-color:#c5d52b;
+}
+
+.panel .panel-header span, 
+#navigation ul li.active a, 
+#navigation ul li.active span, 
+#user-tools #username, 
+#navigation ul li .nav-tooltip, 
+#user-tools #user-info #user-functions #username, 
+.ui-dialog .ui-dialog-title, 
+.ui-state-default, 
+.ui-state-active, 
+.ui-state-hover, 
+.ui-state-focus, 
+.ui-state-default a, 
+.ui-state-active a, 
+.ui-state-hover a, 
+.ui-state-focus a
+{
+	color:#c5d52b;
+	text-shadow:0 0 6px rgba(197, 213, 42, 0.5);
+}
+
+#searchbox .search-submit, 
+.panel .panel-header .collapse-button span, 
+.dataTables_wrapper .dataTables_paginate .paginate_disabled_previous, 
+.dataTables_wrapper .dataTables_paginate .paginate_enabled_previous, 
+.dataTables_wrapper .dataTables_paginate .paginate_disabled_next, 
+.dataTables_wrapper .dataTables_paginate .paginate_enabled_next, 
+.dataTables_wrapper .dataTables_paginate .paginate_active, 
+.table tbody tr.odd:hover td, 
+.table tbody tr.even:hover td, 
+.ui-slider-horizontal .ui-slider-range, 
+.ui-slider-vertical .ui-slider-range, 
+.ui-progressbar .ui-progressbar-value, 
+.ui-datepicker td.ui-datepicker-current-day, 
+.ui-datepicker .ui-datepicker-prev, 
+.ui-datepicker .ui-datepicker-next, 
+.ui-accordion-header .ui-accordion-header-icon, 
+.ui-dialog-titlebar-close
+{
+	background-color:#c5d52b;
+}
