@@ -23,11 +23,11 @@ include ("application/languages/".$_SESSION['language']."/changefaction.php");
 <div class="content-title"><h3><?= $p_changefaction['1'] ?></h3></div>
 	<div class="news-info">
       <div class="information">
-            <font class="news-information"><?= $p_changefaction['2'] ?></font> :
-			  <?= number_format($amount); ?> <?= $p_changefaction['3'] ?> 
-              <font class="news-information"><?= $p_changefaction['4'] ?></font> :
-              <?= number_format($dp); ?> <?= $p_changefaction['5'] ?>
-            &nbsp;
+          <font class="news-information"><?= $p_changefaction['31'] ?></font> :
+          <?= number_format($vp); ?> <?= $p_changefaction['32'] ?> <?= number_format($dp); ?> <?= $p_changefaction['33'] ?>
+          <font class="news-information"><?= $p_changefaction['34'] ?></font> :
+          <?= number_format($_vp); ?> <?= $p_changefaction['35'] ?> <?= number_format($_dp); ?> <?= $p_changefaction['36'] ?>
+          &nbsp;
       </div>
      </div>
 <div class="content-body">
@@ -72,6 +72,15 @@ include ("application/languages/".$_SESSION['language']."/changefaction.php");
             <legend class="wizard-label"><i class="icol-user"></i> <?= $p_changefaction['18'] ?></legend>
             <h2><?= $p_changefaction['19'] ?></h2>
             <p><?= $p_changefaction['20'] ?></p>
+            <div class="form-group col-sm-12">
+              <label class="col-sm-2 control-label"><?= $p_changefaction['39'] ?></label>
+              <div class="col-sm-5">
+                  <select class="form-control" id="method" name="method">
+                      <option value="dp"><?= $p_changefaction['37'] ?></option>
+                      <option value="vp"><?= $p_changefaction['38'] ?></option>
+                  </select>
+              </div>
+            </div>
             <div class="form-group col-sm-12">
               <label class="col-sm-2 control-label"></label>
               <div class="col-sm-5">

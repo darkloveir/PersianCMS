@@ -17,8 +17,8 @@
 	You should have received a copy of the GNU General Public License
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-$smtp_from = 'yourgmail@domain.com';
+$smtp_from = 'YourEmaiL@domain.com';
 $smtp_fromname = 'PersianCMS';
-$smtp_replyto = 'yourgmail@domain.com';
+$smtp_replyto = 'YourEmaiL@domain.com';
 $smtp_replytoname = 'Information';
 ?>

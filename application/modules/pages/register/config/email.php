@@ -17,9 +17,9 @@
 	You should have received a copy of the GNU General Public License
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-$smtp_from = 'yourgmail@gmail.com';
+$smtp_from = 'amiroperator@gmail.com';
 $smtp_fromname = 'PersianCMS';
-$smtp_replyto = 'yourgmail@gmail.com';
+$smtp_replyto = 'amiroperator@gmail.com';
 $smtp_replytoname = 'Information';
 $smtp_subject = 'اکانت شما با موفقیت ساخته شد.';
 $smtp_body = 'اکانت شما با موفقیت ساخته شد لطفا برای فعال کردن اکانت خود مشخصات خود را کامل کنید.';

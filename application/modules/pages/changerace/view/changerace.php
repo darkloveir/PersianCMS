@@ -23,11 +23,11 @@ include ("application/languages/".$_SESSION['language']."/changerace.php");
 <div class="content-title"><h3><?= $p_changerace['1'] ?></h3></div>
 	<div class="news-info">
       <div class="information">
-            <font class="news-information"><?= $p_changerace['2'] ?></font> :
-			  <?= number_format($amount); ?> <?= $p_changerace['3'] ?> 
-              <font class="news-information"><?= $p_changerace['4'] ?></font> :
-              <?= number_format($dp); ?> <?= $p_changerace['5'] ?>
-            &nbsp;
+          <font class="news-information"><?= $p_changerace['31'] ?></font> :
+          <?= number_format($vp); ?> <?= $p_changerace['32'] ?> <?= number_format($dp); ?> <?= $p_changerace['33'] ?>
+          <font class="news-information"><?= $p_changerace['34'] ?></font> :
+          <?= number_format($_vp); ?> <?= $p_changerace['35'] ?> <?= number_format($_dp); ?> <?= $p_changerace['36'] ?>
+          &nbsp;
       </div>
      </div>
 <div class="content-body">
@@ -72,6 +72,15 @@ include ("application/languages/".$_SESSION['language']."/changerace.php");
             <legend class="wizard-label"><i class="icol-user"></i> <?= $p_changerace['18'] ?></legend>
             <h2><?= $p_changerace['19'] ?></h2>
             <p><?= $p_changerace['20'] ?></p>
+            <div class="form-group col-sm-12">
+              <label class="col-sm-2 control-label"><?= $p_changerace['39'] ?></label>
+              <div class="col-sm-5">
+                  <select class="form-control" id="method" name="method">
+                      <option value="dp"><?= $p_changerace['37'] ?></option>
+                      <option value="vp"><?= $p_changerace['38'] ?></option>
+                  </select>
+              </div>
+            </div>
             <div class="form-group col-sm-12">
               <label class="col-sm-2 control-label"></label>
               <div class="col-sm-5">

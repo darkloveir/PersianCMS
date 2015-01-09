@@ -79,14 +79,14 @@ if(isset($_POST['rename'])){
     }
     if($result == 1 && is_numeric($result)) {
     } else {
-        switch($result){	
-            case 0:  $message = '<p class="success"><a href="panel">'.$p_rename['25'].'</a></p>'; break;
-            case -1: $message = '<p class="error">'.$p_rename['26'].'</p>'; break;
-            case -2: $message = '<p class="error">'.$p_rename['27'].'</p>'; break;
-            case -3: $message = '<p class="error">'.$p_rename['28'].'</p>'; break;
-            case -4: $message = '<p class="error">'.$p_rename['29'].'</p>'; break;
-			case -5: $message = '<p class="error">'.$p_rename['40'].'</p>'; break;
-            default: $message = '<p class="error">'.$p_rename['30'].'</p>'; break;
+        switch($result){
+            case 0:  $message = '<p class="success"><a href="panel">'.$p_changerace['25'].'</a></p>'; break;
+            case -1: $message = '<p class="error">'.$p_changerace['26'].'</p>'; break;
+            case -2: $message = '<p class="error">'.$p_changerace['27'].'</p>'; break;
+            case -3: $message = '<p class="error">'.$p_changerace['28'].'</p>'; break;
+            case -4: $message = '<p class="error">'.$p_changerace['29'].'</p>'; break;
+			case -5: $message = '<p class="error">'.$p_changerace['40'].'</p>'; break;
+            default: $message = '<p class="error">'.$p_changerace['30'].'</p>'; break;
         }
     }
 }

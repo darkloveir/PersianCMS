@@ -18,13 +18,13 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 $smtp_host = 'smtp.gmail.com';
-$smtp_username = 'yourgmail@domain.com';
+$smtp_username = 'YourEmaiL@domain.com';
 $smtp_password = 'YourPassword';
 $smtp_secure = 'ssl';
 $smtp_port = 465;
-$smtp_from = 'yourgmail@domain.com';
+$smtp_from = 'YourEmaiL@domain.com';
 $smtp_fromname = 'PersianCMS';
-$smtp_replyto = 'yourgmail@domain.com';
+$smtp_replyto = 'YourEmaiL@domain.com';
 $smtp_replytoname = 'Information';
 $smtp_subject = 'گزارش باگ با موفقیت ارسال شد.';
 $smtp_body = 'گزارش باگ شما با موفقیت ارسال شد و در کمترین زمان ممکن فیکس خواهد شد.';

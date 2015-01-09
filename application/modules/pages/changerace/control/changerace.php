@@ -32,10 +32,12 @@ $id = $MySQL->arrayedResult['id'];
 $MySQL->database = $db_website;
 $MySQL->Connect($persistant);
 $MySQL->executeSQL("SELECT * FROM account_data WHERE id = $id;");
-$amount = $MySQL->arrayedResult['dp'];
-
-$MySQL->executeSQL("SELECT * FROM service_name WHERE name = 'changerace';");
+$vp = $MySQL->arrayedResult['vp'];
 $dp = $MySQL->arrayedResult['dp'];
+
+$MySQL->executeSQL("SELECT * FROM service_name WHERE name = 'rename';");
+$_vp = $MySQL->arrayedResult['vp'];
+$_dp = $MySQL->arrayedResult['dp'];
 
 $MySQL->database = $db_characters;
 $MySQL->Connect($persistant);
@@ -44,35 +46,47 @@ $MySQL->executeSQL("SELECT * FROM characters WHERE name = '$character';");
 $at_login = $MySQL->arrayedResult['at_login'];
 
 if(isset($_POST['changerace'])){
+	$method = mysql_real_escape_string($_POST["method"]);
+	
     $result = 1;
     if($character == "")
         $result = -1;
     
     if (!chk_crypt($_POST['captcha']))
         $result = -2;
-        
-    if($dp > $amount)
-        $result = -3;
+		
+	if($_dp > $dp)
+	    if($method == "dp")
+	        $result = -3;
+		
+	if($_vp > $vp)
+	    if($method == "vp")
+	        $result = -5;
         
     if($at_login != 0)
         $result = -4;
         
     if($result == 1){
-        $MySQL->executeSQL("UPDATE characters SET at_login = '128' WHERE name = '$character';");
+        if($method == "vp" || $method == "dp")
+        	$MySQL->executeSQL("UPDATE characters SET at_login = '128' WHERE name = '$character';");
         $MySQL->database = $db_website;
         $MySQL->Connect($persistant);
-        $MySQL->executeSQL("UPDATE `account_data` SET dp = dp - $dp WHERE `id` = $id;");
+		if($method == "vp")
+        	$MySQL->executeSQL("UPDATE `account_data` SET vp = vp - $_vp WHERE `id` = $id;");
+		if($method == "dp")
+        	$MySQL->executeSQL("UPDATE `account_data` SET dp = dp - $_dp WHERE `id` = $id;");
         $result = 0;
     }
     if($result == 1 && is_numeric($result)) {
     } else {
         switch($result){	
-            case 0:  $message = '<p class="success"><a href="panel">عملیات با موفقیت انجام شد.</a></p>'; break;
-            case -1: $message = '<p class="error">هیرو خود را از نوار کناری سمت راست انتخاب کنید</p>'; break;
-            case -2: $message = '<p class="error">تصوير امنيتي را به درستي وارد نکرديد</p>'; break;
-            case -3: $message = '<p class="error">موجودی شما کافی نمیباشد</p>'; break;
-            case -4: $message = '<p class="error">شما قبلا یک سرویسی را روی این هیرو اعمال کرده اید و از آن استفاده نکرده اید.</p>'; break;
-            default: $message = '<p class="error">خطایی نامعلوم رخ داده است لطفا دوباره سعی کنید. اگر باز هم دچار این خطا شدید با مدیریت تماس بگیرید.</p>'; break;
+            case 0:  $message = '<p class="success"><a href="panel">'.$p_changerace['25'].'</a></p>'; break;
+            case -1: $message = '<p class="error">'.$p_changerace['26'].'</p>'; break;
+            case -2: $message = '<p class="error">'.$p_changerace['27'].'</p>'; break;
+            case -3: $message = '<p class="error">'.$p_changerace['28'].'</p>'; break;
+            case -4: $message = '<p class="error">'.$p_changerace['29'].'</p>'; break;
+			case -5: $message = '<p class="error">'.$p_changerace['40'].'</p>'; break;
+            default: $message = '<p class="error">'.$p_changerace['30'].'</p>'; break;
         }
     }
 }

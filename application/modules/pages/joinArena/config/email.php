@@ -18,13 +18,13 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 $smtp_host = 'smtp.gmail.com';
-$smtp_username = 'yourgmail@domain.com';
+$smtp_username = 'YourEmaiL@domain.com';
 $smtp_password = 'YourPassword';
 $smtp_secure = 'ssl';
 $smtp_port = 465;
-$smtp_from = 'yourgmail@domain.com';
+$smtp_from = 'YourEmaiL@domain.com';
 $smtp_fromname = 'PersianCMS';
-$smtp_replyto = 'yourgmail@domain.com';
+$smtp_replyto = 'YourEmaiL@domain.com';
 $smtp_replytoname = 'Information';
 $smtp_subject = 'ثبت نام در ایونت با موفقیت انجام شد.';
 $smtp_body = 'ثبت نام در ایونت با موفقیت انجام شد و تاریخ برکذاری ایونت به شما اعلام مشود.';
